@@ -5,8 +5,10 @@ body{background:#dadada; font-family: 'Rosario', serif; font-weight: 100;}
     overflow:auto; background: #f5f5f5;
     box-shadow: 0 3px 5px rgba(0,0,0,.4);
     border-radius: 3px;border-top: 1px solid #fff;
+    position: relative;
 }
 h2,h3,h4,h5{font-weight: 100;}
+ul li{list-style-image: url(../images/icons/plus.png);}
 h2,.cv-career-objective h3, .cv-key-skills h3{
     position:absolute; top: -13px; left: 0; right: 0;
     font-size: 16px; text-transform: uppercase;
@@ -93,6 +95,7 @@ span.type{ margin: 0 5px;}
 /* COMPANY INFO */
 
 .cv-job{position: relative; border-bottom: 1px solid #eee; border-top: 1px solid #fff; padding-bottom: 30px;}
+.cv-company-logo{display:none; max-width: 150px; vertical-align: middle; margin: 0;}
 .cv-company-name{ font-size: 24px; margin: 15px 0 5px 0;}
 .cv-company-location{font-size: 14px; color:#aaa; margin: 0;}
 .cv-company-job-title{position: absolute; right: 10px; top:-20px; font-size: 20px; display: inline; color:#000;}
@@ -100,7 +103,8 @@ span.type{ margin: 0 5px;}
 .cv-company-employment-type{display: none;}
 .cv-job p, .cv-job li{line-height: 24px; color:#343434;}
 .cv-company-description,.cv-job-skills{display: none;}
-.cv-job a{float:right; display: block; margin-right: 10px;}
+.cv-job a.link{float:right; display: block; margin-right: 10px;}
+.cv-job-highlights{display: none;}
 
 /* EDUCTATION SECTION */
 
@@ -119,23 +123,34 @@ span.type{ margin: 0 5px;}
 /* INTERESTS */
 .cv-interests dt{font-size: 20px; margin: 0 0 10px 10px; color:#000;}
 .cv-interests dd{line-height: 24px; font-size: 16px; margin-bottom: 15px; color:#343434;}
+
+/* CARD JOB CSS */
+#card .cv-job{ width: 890px; text-align:left;}
+#card .cv-job-header{background: #222; color:#fff; min-height: 100px;}
+#card .cv-company-name{margin-left: 0;}
+#card .cv-company-link{display: inline;}
+#card .cv-company-logo{display: inline-block; margin: 15px 10px; }
+#card .cv-company-name{display: inline;}
+#card .cv-company-job-title{color:#fff; top: 0px;}
+#card .cv-job-duration{top: 60px;}
+#card .cv-company-body{background: #343434; color:#f0f0f0; margin: -20px 0 0 0; overflow: none; min-height: 120px;}
+#card .cv-company-location{display: none;}
+#card .cv-company-map-location{width: 100px; height: 100px; margin: 10px; background: #eee; float:left;}
+#card .cv-company-description{
+  display: block; color:#f0f0f0;
+}
+#card .cv-job-skills{display: block; padding: 10px 20px;}
+#card .cv-company-description-tab{position: absolute; bottom: 10px; left: 10px; padding: 5px 8px; background: #343434; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;}
+#card .cv-company-description{ padding: 20px 0;}
+#card .cv-job-extra{overflow: none; float:left; width: 150%;}
+#card .cv-job-highlights{width: 100%; background: #000; float:left; display: block;}
+#card .cv-job-detail{padding: 10px;}
+#card .more-info{display: none;}
+
 /* UTILITY CLASSES */
+#backdrop{position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,.5); z-index: 100; display: none;}
+#card{background: #fff; position: fixed; z-index: 101; top: 155px; left: 0; display: none; width: 890px; box-shadow: 0 5px 10px rgba(25,25,25,.9);}
 .first{border-top: none;}
 .last{border-bottom: none;}
 .link{text-align: center;}
-a{
-    background: #ff3019;
-    background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404));
-    background: -webkit-linear-gradient(top, #ff3019 0%,#cf0404 100%);
-    background: -o-linear-gradient(top, #ff3019 0%,#cf0404 100%);
-    background: -ms-linear-gradient(top, #ff3019 0%,#cf0404 100%);
-    background: linear-gradient(top, #ff3019 0%,#cf0404 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 );
-    color:#fff; text-decoration: none;
-    padding: 3px 5px; border-radius: 5px;
-    border-bottom: 1px solid #fff;
-    
-}
 
-a:hover{ box-shadow: 0 2px 2px rgba( 0,0,0,.4); border-bottom: none;}

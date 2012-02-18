@@ -12,7 +12,7 @@
       <div class="cv-header">
         <div class="cv-picture"></div>
         <div class="vcard cv-contact-info">
-          <h1 class="fn">Damien McMahon</h1>
+          <h1 class="fn">Damien McMahon BSc</h1>
           <address class="adr">
             <span class="street-address">10 Well Royd Avenue</span>,
             <span class="locality">Halifax</span>,
@@ -20,14 +20,14 @@
             <span class="postal-code">HX2 0LN</span>
           </address>
           <div class="cv-contact-details">
-            <img src="images/phone.png" alt="phone icon"/>
+            <img src="images/icons/phone.png" alt="phone icon"/>
             <span class="tel">
             <span class="type">Home:</span>01422 344729</span>
-            <img src="images/email.png" alt="email icon"/>
+            <img src="images/icons/email.png" alt="email icon"/>
             <span class="email">damien.mcmahon@gmail.com</span>
-            <img src="images/twitter.png" alt="twitter icon"/>
+            <img src="images/icons/twitter.png" alt="twitter icon"/>
             <span class="twitter">@damien_m</span>
-            <img src="images/web.png" alt="web icon"/>
+            <img src="images/icons/web.png" alt="web icon"/>
             <span class="url">http://www.macoto.co.uk</span>
           </div>
         </div>
@@ -40,7 +40,7 @@
           </div>
           <div class="cv-career-objective">
             <h3>Career Objective</h3>
-            <p>To become a successful Web Developer renowned for building weel considered and highly usable web sites for a variety of clients.</p>
+            <p>To become a successful Web Developer renowned for building well considered and highly usable web sites for a variety of clients.</p>
         </div>
     <div class="cv-key-skills">
         <h3>Key Skills</h3>
@@ -56,6 +56,10 @@
       <div class="cv-work-history">
     <h2>Employment History</h2>
     <div class="cv-job first">
+      <div class="cv-job-header">
+        <a href="http://www.frogtrade.com" class="cv-company-link" title="visit Frogtrade">
+          <img src="images/jobs/frogtrade_bw.png" alt="frogtrade logo" class="cv-company-logo"/>
+        </a>
         <h3 class="org cv-company-name">Frogtrade Ltd</h3>
         <h4 class="cv-company-location">Halifax, West Yorkshire</h4>
         <div class="cv-job-duration">
@@ -65,22 +69,32 @@
         </div>
         <span class="cv-company-employment-type">Full Time</span>
         <h5 class="cv-company-job-title">Frontend Web Developer</h5>
+      </div>
+      <div class="cv-company-body">
+        <div class="cv-company-map-location"></div>
         <p class="cv-company-description">
-      Frogtrade are a software company that offer a web based e-learning platform to schools across the UK and Europe. Recently they have announced a contract with the Malaysian goverment to provide a new solution to over 10,000 schools across the country with a user base of 10 million staff and students, to be launched early 2012.
+      Frogtrade is a software company that offer a web based e-learning platform to schools across the UK and Europe. Recently they have announced a contract with the Malaysian goverment to provide a new solution to over 10,000 schools across the country with a user base of 10 million staff and students, to be launched early 2012.
         </p>
-        <p class="cv-job-description">
+      </div>
+      <div class="cv-job-detail">
+          <p class="cv-job-description">
       As part of a team of Developers my role has been to work on the frontend of the current version of Frog to to provide new functionality, fix bugs and more recently as part of the Frog Projects team to help deliver the Malaysia project.
-        </p>
-        <ul class="cv-job-skills">
-      <li>Researched,selected and helped implement the framework and architecture used for the Malaysia project, moving to a backend providing an API with the frontend completely building and serving the interface.</li>
-        <li>Wrote APIs used by external Developers on the Frog Developer Platform which enables the existing version of Frog to be extended by schools</li>
-        <li>Provided various levels of training on widget development for developers and technicians from various schools looking to implement the FDP.</li>
-        <li>Built the frontend of a new Calendar system featuring drag and drop appointment creation used by over 500 schools</li>
-        <li>Built the frontend for the Widget store used across all Frog platforms that allows resource searching and selection from various sources as well as installing new widgets to be used in Frog</li>
-      </ul>
-      <a href="#frogtrade">More Info</a>
+          </p>
+          <ul class="cv-job-skills">
+            <li>Researched,selected and helped implement the framework and architecture used for the Malaysia project, moving to a backend providing an API with the frontend completely building and serving the interface.</li>
+            <li>Wrote APIs used by external Developers on the Frog Developer Platform which enables the existing version of Frog to be extended by schools</li>
+            <li>Provided various levels of training on widget development for developers and technicians from various schools looking to implement the FDP.</li>
+            <li>Built the frontend of a new Calendar system featuring drag and drop appointment creation used by over 500 schools</li>
+            <li>Built the frontend for the Widget store used across all Frog platforms that allows resource searching and selection from various sources as well as installing new widgets to be used in Frog</li>
+          </ul>
+        </div>
+        <div class="cv-job-highlights">
+        {CAROUSEL HERE}
+        </div>
+      <a href="#frogtrade" class="more-info">More Info</a>
     </div>
     <div class="cv-job">
+      <img src="images/jobs/ipeak_bw.png" alt="ipeak media logo" class="cv-company-logo"/>
       <h3 class="org cv-company-name">Easy Affiliate / iPeak Media</h3>
       <h4 class="cv-company-location">Huddersfield, West Yorkshire</h4>
         <div class="cv-job-duration">
@@ -100,9 +114,10 @@
           <li>Created various scripts and crons for tracking and retrieving transactions via web services </li>
           <li>Helped redesign front end of "iGain" to be more user friendly and accessible.</li>
         </ul>
-        <a href="#ipeak">More Info</a>
+        <a href="#ipeak" class="more-info">More Info</a>
     </div>
     <div class="cv-job">
+        <img src="images/jobs/acorn_bw.png" alt="Acorn Stairlifts logo" class="cv-company-logo"/>
         <h3 class="org cv-company-name">Acorn Stairlifts</h3>
         <h4 class="cv-company-location">Steeton, West Yorkshire</h4>
         <div class="cv-job-duration">
@@ -125,9 +140,10 @@
           </li>
           <li>Introduced jQuery and Thickbox use to Acorn helping to reduce javascript development time and improve workflow for users</li>
         </ul>
-        <a href="#acorn">See More</a>
+        <a href="#acorn" class="more-info">See More</a>
     </div>
     <div class="cv-job">
+      <img src="images/jobs/vodafone_bw.png" alt="Vodafone logo" class="cv-company-logo"/>
         <h3 class="org cv-company-name">Vodafone</h3>
         <h4 class="cv-company-location">Newcastle under Lyme, Staffordshire</h4>
         <div class="cv-job-duration">
@@ -150,9 +166,10 @@
           </li>
           <li>Introduced jQuery and Thickbox use to Acorn helping to reduce javascript development time and improve workflow for users</li>
         </ul>
-        <a href="#vodafone">See More</a>
+        <a href="#vodafone" class="more-info">See More</a>
     </div>
     <div class="cv-job last">
+      <img src="images/jobs/nova_bw.png" alt="nova logo" class="cv-company-logo"/>
       <h3 class="org cv-company-name">Nova Corporation</h3>
       <h4 class="cv-company-location">Yabashira, Chiba, Japan</h4>
       <div class="cv-job-duration">
@@ -178,7 +195,7 @@
           Took additional training to be able to teach a wide range of English lessons from Business English to TOIEC and Eiken. The latter two are recognised as being important for academic studiers
         </li>
       </ul>
-      <a href="#nova">See More</a>
+      <a href="#nova" class="more-info">See More</a>
     </div>
   </div>
     <div class="cv-education-history">
@@ -246,8 +263,10 @@
     <h2>References</h2>
       <h3>Available on Request</h3>
   </div>
+    <div id="card">&nbsp;</div>
 </div>
-  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <div id="backdrop">&nbsp;</div>
+
   <script src="js/underscore.min.js"></script>
   <script src="js/backbone.min.js"></script>
   <script src="js/main.js"></script>
