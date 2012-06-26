@@ -1,0 +1,136 @@
+body{background:#FFF; font-family: 'Rosario', serif; font-weight: 100;}
+.cv-wrapper{width: 100%; 
+    margin: 0;padding: 0; 
+    text-align:center;
+    overflow:auto;
+    position: relative;
+    font-size: 12px;
+}
+h2,h3,h4,h5{font-weight: 100;}
+h2,.cv-career-objective h3, .cv-key-skills h3{
+    position:absolute; top: 0; left: 0; right: 0;
+    font-size: 12px; text-transform: uppercase;
+    color:#eee; letter-spacing: 0.1em;
+}
+.cv-career-objective h3, .cv-key-skills h3{
+    border-top:none;
+    margin: 0;padding:0;
+}
+.cv-header{
+  width:100%; border-bottom: 1px solid #eee; 
+  overflow:auto; position: relative!important; 
+  text-align: center;z-index: 100; top: 0;
+  margin: 0; padding:0;
+}
+.cv-picture{
+    width: 0%; float:left; margin: ;
+    height:150px;
+    display: none;
+}
+.cv-contact-info{
+    width: 96%;
+    text-align:left;
+    padding: 0 2%;
+    font-size: 14px;
+    float:left;
+}
+.cv-contact-info h1{
+  font-size: 24px;
+  text-align: center;
+  color:#444;
+  font-weight: 200;
+  margin-bottom: 10px
+}
+.cv-contact-info address{
+    color:#888;
+    font-size: 16px;
+    font-style: normal;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 0;
+}
+.cv-contact-details{
+    width: 100%;
+    padding: 5px 0;
+    height: 20px;
+    float:left;
+    margin: 0;
+}
+.cv-contact-details img{display: none; vertical-align: middle; margin: -5px -5px 0 0;}
+.cv-contact-details span{
+    color:#333;
+    margin: 0 10px;
+    font-size: 14px;
+    line-height: 20px;
+}
+span.type{ margin: 0 5px;}
+.cv-summary,
+.cv-work-history,
+.cv-education-history,
+.cv-personal-skills,
+.cv-interests,
+.cv-references{
+    width: 100%;
+    float:left; 
+    text-align:left;
+    position:relative;
+    padding-top: 10px;
+    color:#444;
+}
+
+.cv-personal-statement{
+    line-height: 28px; margin: 15px 30px; font-style: italic;
+}
+.cv-career-objective, .cv-key-skills{
+    width: 50%; float:left; margin: 0; position: relative;
+    line-height: 24px; padding: 20px 0 0 0;
+}
+.cv-work-history{width: 100%; clear:both; overflow:auto; text-align:left;}
+
+
+/* COMPANY INFO */
+
+.cv-job{position: relative; border-bottom: 1px solid #eee; padding-bottom: 10px;}
+.cv-company-name{ font-size: 14px; margin: 25px 0 10px 0;}
+.cv-company-location{font-size: 11px; color:#aaa; margin: 0;}
+.cv-company-job-title{position: absolute; right: 10px; top:-20px; font-size: 14px; display: inline; color:#000;}
+.cv-job-duration{position: absolute; right: 10px; top: 25px; font-size: 10px; color:#bbb;}
+.cv-company-employment-type{display: none;}
+.cv-job p, .cv-job li{line-height: 18px; color:#343434;}
+.cv-company-description{display: none;}
+.cv-job a.link{float:right; display: block; margin-right: 10px;}
+.cv-job-highlights{display: none;}
+
+.more-info{display: none;}
+.more-info:hover{
+  text-decoration: underline;
+}
+/* EDUCTATION SECTION */
+.cv-education{margin-top:30px;}
+.cv-education-history {text-align: center;}
+.cv-education-history h2{text-align: left;}
+.cv-education-grade{font-size: 12px; font-weight: 400;}
+.cv-education-qualification{display: inline; font-size: 12px;}
+.cv-education-institute{ margin: 5px 0;}
+.cv-education-attendance-date{font-size: 12px; color:#aaa; margin-bottom: 5px; display: block;}
+
+/* SKILLS */
+.cv-skill-list{margin-top: 25px;}
+.cv-skill-list dt{font-size: 12px; margin: 0; color:#000;}
+.cv-skill-list dd{line-height: 18px; font-size: 11px; margin-bottom: 10px; color:#343434;}
+
+/* INTERESTS */
+.cv-interests dl{margin-top: 25px;}
+.cv-interests dt{font-size: 12px; margin: 0; color:#000;}
+.cv-interests dd{line-height: 18px; font-size: 11px; margin-bottom: 10px; color:#343434;}
+
+/* REFERENCES */
+.cv-references h3{text-align: center;}
+
+/* UTILITY CLASSES */
+#backdrop{position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,.5); z-index: 100; display: none;}
+#card{background: #fff; position: fixed; z-index: 101; top: 155px; left: 0; display: none; width: 890px; box-shadow: 0 5px 10px rgba(25,25,25,.9);}
+.first{border-top: none;}
+.last{border-bottom: none;}
+.link{text-align: center;}
+
