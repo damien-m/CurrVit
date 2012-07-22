@@ -4,20 +4,23 @@
   
   $portfolio = array();
   
-  $portfolio['frogtrade'] = array('img' => array(
-                                                array('href'=>'images/jobs/'.$company.'/fdp.jpg', 'title'=>'FDP Community Site','link'=>'http://fdp.frogcommunity.com','description'=>'Lorem Ipsum'),
-                                                array('href'=>'images/jobs/'.$company.'/screencasts.png', 'title'=>'FDP Screencasts','link'=>'http://fdp.frogcommunity.com','description'=>'Lorem Ipsum'),
-                                                array('href'=>'images/jobs/'.$company.'/screencasts.png', 'title'=>'FDdafsts','link'=>'http://fdp.frogcommunity.com','description'=>'Lorem Ipsum')
-                                            ),
-                                  'videos' => array( 
-                                                array( 'href'=>'', 'title'=>'FDP Screencast')
-                                            )
-                                );
-  $portfolio['ipeak'] = array('img' => array(
-                                                array('href'=>'images/'.$company.'/fdp.jpg', 'title'=>'FDP Community Site'),
-                                                array('href'=>'images/'.$company.'/screencasts.png', 'title'=>'FDP Screencasts')
-                                            )
-                                );
+  $portfolio['company1'] = array(
+    'img' => array(
+      array(
+        'href'=>'path/to/your/image.jpg',
+        'title'=>'Title of yor work',
+        'link'=>'http://example.com/',
+        'description'=>'lorem dolor sit amet.'
+      ),
+      array(
+        'href'=>'path/to/your/image.jpg',
+        'title'=>'Title of yor work',
+        'link'=>'http://example.com/',
+        'description'=>'lorem dolor sit amet.'
+      ),
+    )
+  );
+  
   $JSON = json_encode($portfolio[$company]);
   
   echo $JSON;
