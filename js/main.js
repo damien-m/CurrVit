@@ -1,6 +1,7 @@
 $(function(){
-  Portfolio = Backbone.Model.extend({
+  var Portfolio = Backbone.Model.extend({
     url: 'portfolio.php?company=',
+
     urlRoot: '/CurrVit/Currvit/portfolio.php?company=',
     
     defaults : {
@@ -12,7 +13,7 @@ $(function(){
     }
   });
   
-  Carousel = Backbone.View.extend({
+  var Carousel = Backbone.View.extend({
     className: '.cv-job-carousel',
     
     tagName: 'div',
@@ -27,13 +28,15 @@ $(function(){
     carouselTemplate: 	'<div class="carousel-main"><div class="carousel-left">&lt;</div><div class="carousel-holder"><% _.each(images, function( image ) { %><div class="carousel-item"> <img src="<%= image.href %>" /><div class="carousel-info"><h3><%= image.title %></h3><a href="<%= image.link %>"><%= image.link %></a><p><%= image.description%></p></div></div><% }); %></div><div class="carousel-right">&gt;</div></div>',
     
     render : function(){
-      var imgs = this.model.get('img');
-      var carouselTemplate = _.template(this.carouselTemplate,{images: imgs, total : imgs.length } );
-      $(this.el).append(carouselTemplate); //carouselTemplate({images: this.model.attributes.images }) );
+      var imgs = this.model.get('img'),
+          carouselTemplate = _.template(this.carouselTemplate,{images: imgs, total : imgs.length } );
+
+      $(this.el).append(carouselTemplate);
     },
     
     initialize: function( options ) {
       var self = this;
+
       this.model = new Portfolio( options);
       
       this.model.fetch({
@@ -147,14 +150,12 @@ $(function(){
       e.preventDefault();
       var job = $(e.target).parents('.cv-job').clone(),
           card = $("#card");
+
       this.selectedCompany = job.data('company');
       
       card.html(job);
 
-      card.css({
-        'left': this.cardLeftPos + 'px'
-      });
-      
+      card.css('left',this.cardLeftPos + 'px');
       
       this.toggleOverlay();
     },
@@ -189,7 +190,6 @@ $(function(){
         
         //get the carousel JSON
         this.carouselEl = new Carousel({id: this.selectedCompany, el: carouselDiv}); 
-        
         
       }else {
         
