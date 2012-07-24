@@ -1,8 +1,8 @@
-body{background: url(../images/diagonal-noise.png ) #dadada; font-family: 'Rosario', serif; font-weight: 100;}
+body{background: url(../images/diagonal-noise.png ) #dadada; font-family: 'Rosario', serif; font-weight: 100; position: relative;}
 .cv-wrapper{width: 938px; 
     margin: 50px auto;padding: 10px; 
     text-align:center; border: 1px solid #ccc;
-    overflow:auto; background: #f5f5f5;
+    overflow:auto; background: #f8f8f8;
     box-shadow: 0 3px 5px rgba(0,0,0,.4);
     border-radius: 3px;border-top: 1px solid #fff;
     position: relative;
@@ -19,7 +19,7 @@ h2,.cv-career-objective h3, .cv-key-skills h3{
 .cv-career-objective h3, .cv-key-skills h3{
     border-top:none;
 }
-.cv-header{width:940px; border-bottom: 1px solid #eee; overflow:auto; position: relative; text-align: center; background: #f5f5f5;z-index: 100;}
+.cv-header{width:940px; border-bottom: 1px solid #eee; overflow:auto; position: relative; text-align: center; background: #f8f8f8;z-index: 100;}
 .cv-picture{
     width: 0%; float:left; margin: ;
     height:150px;
@@ -199,4 +199,5 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', end
 .first{border-top: none;}
 .last{border-bottom: 1px solid transparent;}
 .link{text-align: center;}
+.fixed{position:fixed; top: 0;}
 

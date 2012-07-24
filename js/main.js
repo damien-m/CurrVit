@@ -77,43 +77,69 @@ $(function(){
       'scroll' : 'titleFix',
       'click a.more-info' : 'showJob',
       'click #backdrop' : 'toggleOverlay',
-      'click .cv-carousel-show': 'toggleCarousel'
+      'click .cv-carousel-show': 'toggleCarousel',
+      'resize': 'checkCardPos'
     },
     
     headerEl : null,
     
     headerFixPoint : null,
-    
-    wrapperPos: null,
-    
+        
     selectedCompany : null,
     
     carouselEl : null,
+
+    cardLeftPos: 0,
+
+    resizeTimer: null,
+
+    $wrapper: null,
     
     initialize: function(){
       //get the header offset
       var paddingVal = 30;
       this.headerEl = $('div.cv-header');
       this.headerFixPoint = this.headerEl.offset().top,
-      this.wrapperPos = $(".cv-wrapper").position().left;
+      this.$wrapper = $("div.cv-wrapper");
+
+      //set the centre point for the card
+      this.cardLeftPos  = this.getCardPos();
+      this.titleFix();
+    },
+
+    getCardPos: function(){
+      var cardW = $("#card").width() / 2,
+          centrePoint = $("body").outerWidth()/2;
+        return centrePoint - cardW;
+    },
+
+    checkCardPos : function(e){
+      var self = this;
+
+      if( this.resizeTimer ){
+        clearTimeout( this.resizeTimer);
+      }
+
+      this.resizeTimer = setTimeout( function(){
+          self.setCardPos();
+        }, 500 );
     },
   
+    setCardPos: function(){
+      var newPos = this.getCardPos();
+      $("#card").animate({ left: newPos + 'px'});
+    },
+
     titleFix: function(e){
       var scrollPos = this.el.pageYOffset;
   
-      
       if( scrollPos > this.headerFixPoint){
-        $("div.cv-wrapper").css('paddingTop', this.headerEl.height() + 'px');
-        this.headerEl.css({
-        'position':'fixed',
-        'top': '0',
-        });
+        this.$wrapper.css('paddingTop', this.headerEl.height() + 'px');
+        this.headerEl.addClass('fixed');
         
       }else{
-        $("div.cv-wrapper").css('paddingTop', '0');
-        this.headerEl.css({
-          'position': 'relative'
-        })
+        this.$wrapper.css('paddingTop', '0');
+        this.headerEl.removeClass('fixed');
       }
     },
     
@@ -124,8 +150,9 @@ $(function(){
       this.selectedCompany = job.data('company');
       
       card.html(job);
+
       card.css({
-        'left': this.wrapperPos + 40
+        'left': this.cardLeftPos + 'px'
       });
       
       
